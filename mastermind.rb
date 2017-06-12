@@ -17,6 +17,7 @@ get '/' do
   correct = false
   if params['restart']
      session['code_handler'].new_code
+     session['past_guesses'].clear
   end
   if params['guess']
     guess = params['guess']
