@@ -1,6 +1,26 @@
 <html>
   <head></head>
   <body>
-    <h1>hi</h1>
+    <h1>mastermind-sinatra</h1>
+    <p>Welcome! Your goal is to find the 4 letter code with characters a-f. No repeats.</p>
+    <p>After each guess you will recieve a rating:</p>
+    <ul>
+      <li>A 'R' means you have a letter in the right location</li>
+      <li>A 'W' means you have a letter that is in the code, but not in the right position</li>
+    </ul>
+    <form method="GET">
+      <label for="guess">Guess:</label>
+      <input type="text" name="guess">
+      <input type="submit" value="Submit">
+    </form><br>
+    <h2>Rating</h2>
+    <%= message %><br>
+    <% if correct %>
+      <p>Congratulations! You found the code!</p>
+      <p>Would you like to play again?</p>
+      <form method="GET">
+        <input type="Submit" name="restart" value="Play Again!">
+      </form>
+    <% end %>
   </body>
 </html>
