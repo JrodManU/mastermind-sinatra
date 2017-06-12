@@ -22,5 +22,11 @@
         <input type="Submit" name="restart" value="Play Again!">
       </form>
     <% end %>
+    <h2>Past Guesses</h2>
+    <ul>
+      <% past_guesses.each do |past_guess| %>
+        <li><%= past_guess %></li>
+      <% end %>
+    </ul>
   </body>
 </html>
